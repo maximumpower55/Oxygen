@@ -16,6 +16,7 @@ repositories {
         name = "ldtteam"
         url = uri("https://ldtteam.jfrog.io/artifactory/parchmentmc-snapshots/")
     }
+    mavenLocal()
 }
 
 quiltflower {
@@ -31,6 +32,11 @@ dependencies {
 	modApi "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // THIS IS FROM MAVEN LOCAL BECASUE THE MYRON PR IS NOT MERGED
+    modImplementation include("dev.monarkhes:myron-1.6.0-lib:${project.myron_version}") {
+        exclude group: "net.fabricmc.fabric-api"
+    }
 }
 
 processResources {

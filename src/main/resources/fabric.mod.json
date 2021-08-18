@@ -1,10 +1,10 @@
 {
 	"schemaVersion": 1,
-	"id": "example",
+	"id": "oxygen",
 	"version": "${version}",
 
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Oxygen",
+	"description": "",
 	"authors": ["Maximumpower55"],
 	"contact": {
 		"homepage": "https://github.com/maximumpower55/fabric-example-mod/wiki",
@@ -12,13 +12,9 @@
 	},
 
 	"license": "CC0-1.0",
-	"icon": "assets/example/icon.png",
+	"icon": "assets/oxygen/icon.png",
 
-	"environment": "*",
-	"entrypoints": {
-		"main": ["me.maximumpower55.example.ExampleMod"],
-		"client": ["me.maximumpower55.example.ExampleModClient"]
-	},
+	"environment": "client",
 
 	"depends": {
 		"fabricloader": ">=0.11.3",
